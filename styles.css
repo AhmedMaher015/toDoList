@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+html {
+    padding: 10px;
+    
+    
+}
+
+main {
+    background-color: #eee;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.user-input , .activite{
+    width: 90%;
+    padding: 5px 10px;
+    margin: 13px auto;
+    text-align: left; 
+    
+}
+
+.user-input {
+    display: block;
+}
+
+.btn-add {
+    background-color: white;
+    color: tomato;
+    width: 75px;
+    height: 75%;
+    font-size: 2em;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.btn-add:hover , .btn-done:hover {
+    cursor: pointer;
+}
+
+.btn-done {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    border-radius: 25px;
+    background-color: darkorange;
+    color: #eee;
+    padding: 10px;
+}
+
+.activites-list {
+    display: flex;
+    height: 420px;
+    /* justify-content: start; */
+    flex-flow: column nowrap;
+    overflow: auto;
+}
+
+.activite {
+    background-color: #f78c27;
+    height: fit-content;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.activite p{
+    text-align: left;
+    letter-spacing: 1.5px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+
+
+
+@media (min-width: 550px){
+    main {
+        width: 70%;
+        margin: 5px auto; 
+        
+    }
+    
+}
+
+@media (min-width: 768px){
+    main {
+        width: 50%;
+        margin: 5px auto; 
+        
+    }
+    
+}
+
