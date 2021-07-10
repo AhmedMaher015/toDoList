@@ -8,6 +8,8 @@ const addActivite = () => {
     const userInput = document.querySelector('.user-input');
     const activiteName = document.createElement('p');
     const activiteChecked = document.createElement('input');
+    const dateContainer = document.createElement('div');
+    const date = new Date();
 
     if(userInput.value.length > 22){
         userInput.value = userInput.value.slice(0,22);
@@ -15,13 +17,15 @@ const addActivite = () => {
     // if (userInput.value.length === 0){
     //     userInput = 'break time';
     // }
+    dateContainer.textContent = date.toUTCString();
     activiteChecked.type = 'checkbox';
     activite.classList.add('activite');
+    dateContainer.classList.add('date');
     activiteName.textContent = userInput.value;
     list.appendChild(activite);
     activite.appendChild(activiteName);
-    activite.appendChild(activiteChecked)
-    check = document.querySelector('.activite input');
+    activite.appendChild(activiteChecked);
+    activite.appendChild(dateContainer);
 }
 
 
