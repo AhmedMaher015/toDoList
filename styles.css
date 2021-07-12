@@ -32,12 +32,12 @@ main {
 }
 
 .btn-add {
-    background-color: white;
-    color: tomato;
-    width: 75px;
-    height: 75%;
+    background-color: #f78c27;
+    color: #fff;
+    width: 70px;
+    height: 70px;
     font-size: 2em;
-    border: 1px solid #ddd;
+    border: 1px solid #f78c27;
     border-radius: 50%;
 }
 
@@ -46,35 +46,16 @@ main {
 }
 
 .btn-add:hover {
-    background-color: #ddd;
+    background-color: #f78c27ea;
 }
 
 .btn-add:active {
-    background-color: #ccc;
-}
-
-.btn-done:hover {
-    background-color: rgb(247, 91, 64);
-}
-
-.btn-done:active {
-    background-color: rgb(207, 60, 34);
-}
-
-.btn-done {
-    display: block;
-    margin: 10px auto;
-    width: 90%;
-    border-radius: 25px;
-    background-color: darkorange;
-    color: #eee;
-    padding: 10px;
+    background-color: #f78c27b0;
 }
 
 .activites-list {
     display: flex;
     height: 420px;
-    /* justify-content: start; */
     flex-flow: column nowrap;
     overflow: auto;
 }
@@ -98,6 +79,7 @@ main {
 }
 
 .activite .date {
+    padding: 0px 5px;
     position: absolute;
     bottom: 0px;
     right: 10px;
