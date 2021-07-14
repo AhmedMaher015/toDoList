@@ -19,7 +19,8 @@
         </h1>
         <div class="activites-list"></div>
         <div class="container">
-            <input type="text" name="activity" class="user-input" placeholder="Write your activite">
+            <div class="user-input-value">00 / 22</div>
+            <input type="text" name="activity" class="user-input" placeholder="Write your activite" maxlength="22" size="22" oninput="userInputSize()">
             <button class="btn-add">+</button>
         </div>
     </main>

@@ -35,7 +35,7 @@ const addActivite = () => {
 
         // add activite to container list and add user_input , checkbox and date to activite container
         console.log(userInput.value);
-        list.appendChild(activite);
+        list.prepend(activite);
         activite.appendChild(activiteName);
         activite.appendChild(activiteChecked);
         activite.appendChild(dateContainer);
@@ -50,7 +50,11 @@ document.querySelector('.user-input').addEventListener('keyup',(event)=> {
     }
 });
 
-
+// show user input length 
+const userInputSize = () => {
+    const val = document.querySelector('.user-input');
+    document.querySelector('.user-input-value').textContent = val.value.length + ' / 22'; 
+};
 // action of add button
 document.querySelector('.btn-add').addEventListener('click',addActivite);
 
@@ -71,6 +75,7 @@ const changeText = () => {
          }
      }
 };
+
 
 
 

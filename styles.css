@@ -89,6 +89,13 @@ main {
     color:#fff;
 }
 
+.user-input-value {
+    background-color: #fff;
+    color: #dd8533;
+    width: max-content;
+    padding: 5px;
+    margin-left: 86%;   
+}
 
 
 @media (min-width: 550px){
