@@ -1,0 +1,150 @@
+
+
+$container-color: #eee;
+$activite-color: #f78c27;
+$activite-color-light: #dd8533;
+
+@mixin activite-input{
+    & {
+        width: 90%;
+        padding: 5px 10px;
+        margin: 13px auto;
+        text-align: left;   
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+html {
+    padding: 10px;
+    
+    
+}
+
+main {
+    background-color: $container-color;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.user-input {
+    display: block;
+    @include activite-input;
+}
+
+.btn-add {
+    background-color: $activite-color;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    font-size: 2em;
+    border: 1px solid $activite-color;
+    border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f78c27ea;
+    }
+
+    &:active {
+        background-color: #f78c27b0;
+    }   
+
+}
+
+
+.activites-list {
+    display: flex;
+    height: 420px;
+    flex-flow: column nowrap;
+    overflow: auto;
+}
+
+.activite {
+    background-color: $activite-color;
+    height: max-content;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include activite-input;
+
+    p {
+        text-align: left;
+        letter-spacing: 1.5px;
+        margin-right: 8px;
+        display: inline-block;
+    }
+
+    .date {
+        padding: 0px 5px;
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        background-color: $activite-color-light;
+        font-size: .75em;
+        border-radius: 30px;
+        color:#fff;
+    }
+
+    
+}
+
+
+
+
+
+
+
+.container-user-input {
+    position: relative;
+}
+
+.user-input-value {
+    background-color: #fff;
+    color: $activite-color-light;
+    width: max-content;
+    padding: 5px;
+    font-size: .85em;
+    position: absolute;
+    right: 25px;
+    bottom: 5px;   
+}
+
+
+
+@media (min-width: 526px){
+    main {
+        width: 70%;
+        margin: 5px auto; 
+        
+    }
+
+    .user-input-value {
+        right: 30px;  
+    }
+    
+}
+
+@media (min-width: 890px){
+    main {
+        width: 50%;
+        margin: 5px auto; 
+        
+    }
+
+    .user-input-value {
+        right: 60px;   
+    }
+    
+}
+
+
