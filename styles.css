@@ -94,7 +94,14 @@ main {
     color: #dd8533;
     width: max-content;
     padding: 5px;
-    margin-left: 77.5%;   
+    font-size: .85em;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;   
+}
+
+.container-user-input {
+    position: relative;
 }
 
 
@@ -119,7 +126,7 @@ main {
     }
 
     .user-input-value {
-        margin-left: 86.5%;
+        right: 40px;   
     }
     
 }
