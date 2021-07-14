@@ -94,7 +94,7 @@ main {
     color: #dd8533;
     width: max-content;
     padding: 5px;
-    margin-left: 86%;   
+    margin-left: 77.5%;   
 }
 
 
@@ -104,6 +104,10 @@ main {
         margin: 5px auto; 
         
     }
+
+    .user-input-value {
+        margin-left: 81.5%;
+    }
     
 }
 
@@ -112,6 +116,10 @@ main {
         width: 50%;
         margin: 5px auto; 
         
+    }
+
+    .user-input-value {
+        margin-left: 86.5%;
     }
     
 }
