@@ -4,27 +4,17 @@ const list = document.querySelector('.activites-list');
 
 // function to add activite to container list
 const addActivite = () => {
-    
+
     // create activite container 
     const activite = document.createElement('div');
     activite.classList.add('activite');
 
-    // create date container 
-    const dateContainer = document.createElement('div');
-    const date = new Date(); 
-    dateContainer.textContent = date.toUTCString().replace('GMT' , '');
-    dateContainer.classList.add('date');
-
-    // create checkbox on activite container
-    const activiteChecked = document.createElement('input');
-    activiteChecked.type = 'checkbox';
-    activiteChecked.setAttribute('onClick' , 'changeText()');
-
+    // create date object
+    const date = new Date();
     
-    // create user input 
-    const activiteName = document.createElement('p');
+    // select user input text
     const userInput = document.querySelector('.user-input');
-    activiteName.textContent = userInput.value;
+
 
     // check if user_input is true before add features 
     if (userInput.value){
@@ -32,13 +22,19 @@ const addActivite = () => {
         if(userInput.value.length > 22){
             activiteName.textContent = userInput.value.slice(0,22);
         } 
+    // activite container
+    const html = `
+            <p>${userInput.value}</p>
+            <input type="checkbox" onClick="changeText()">
+            <div class="date">${date.toUTCString().replace('GMT' , '')}</div>
+    `;
 
-        // add activite to container list and add user_input , checkbox and date to activite container
-        console.log(userInput.value);
-        list.prepend(activite);
-        activite.appendChild(activiteName);
-        activite.appendChild(activiteChecked);
-        activite.appendChild(dateContainer);
+   
+
+    // add activite to container list and add user_input , checkbox and date to activite container
+    list.prepend(activite);
+    activite.innerHTML = html;
+       
     }
  
 }
