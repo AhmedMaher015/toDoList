@@ -35,6 +35,7 @@ const addActivite = () => {
     // add activite to container list and add user_input , checkbox and date to activite container
     list.prepend(activite);
     activite.innerHTML = html;
+    userInput.value = '';
        
     }
  
