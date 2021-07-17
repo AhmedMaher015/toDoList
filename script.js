@@ -1,17 +1,5 @@
 'use strict'
 
-
-// store history of activites 
-const history = [];
-
-// const addToHistory = (tex , tim , chec )=>{
-//     const obj = {};
-//     obj.text = tex;
-//     obj.time = tim;
-//     obj.checked = (chec) ? 'Yes':'No';
-//     history.push(obj)
-// };
-
 // define container of list
 const list = document.querySelector('.activites-list');
 
