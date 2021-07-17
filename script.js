@@ -1,7 +1,12 @@
 'use strict'
 
+
+
 // define container of list
 const list = document.querySelector('.activites-list');
+
+// user input length
+const userInputLength = document.querySelector('.user-input-value');
 
 // function to add activite to container list
 const addActivite = () => {
@@ -36,7 +41,7 @@ const addActivite = () => {
     list.prepend(activite);
     activite.innerHTML = html;
     userInput.value = '';
-       
+    userInputLength.textContent = '00 / 22';   
     }
  
 }
