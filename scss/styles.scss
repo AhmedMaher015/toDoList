@@ -29,6 +29,7 @@ $activite-color-light: #dd8533;
         &:hover {
             cursor: pointer;
             background-color: #f78c27ea;
+
         }
     
         &:active {
@@ -93,15 +94,16 @@ main {
 .container-history {
     // width: 90%;
     padding: 10px;
-    margin: 10px auto;
+    margin: 5px auto;
     div {
         margin: 10px auto;
-        width: 85%;
+        width: 100%;
         padding: 10px;
         background-color: $activite-color;
         height: max-content;
         color: #fff;
         border-radius: 30px;
+       
         p {
             display: flex;
             justify-content: space-between;
@@ -146,6 +148,11 @@ main {
     }
 }
 
+button , input {
+    &:focus {
+        outline: none;
+    }
+}
 
 
 
@@ -193,5 +200,4 @@ main {
     }
     
 }
-
 
