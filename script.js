@@ -4,13 +4,13 @@
 // store history of activites 
 const history = [];
 
-const addToHistory = (tex , tim , chec )=>{
-    const obj = {};
-    obj.text = tex;
-    obj.time = tim;
-    obj.checked = (chec) ? 'Yes':'No';
-    history.push(obj)
-};
+// const addToHistory = (tex , tim , chec )=>{
+//     const obj = {};
+//     obj.text = tex;
+//     obj.time = tim;
+//     obj.checked = (chec) ? 'Yes':'No';
+//     history.push(obj)
+// };
 
 // define container of list
 const list = document.querySelector('.activites-list');
@@ -85,18 +85,17 @@ const changeText = () => {
      }
 };
 
-const showHistory = () => {
-    history.forEach((value)=>{
-        const text = `
-        <p>activite: <span>${value.text}</span></p>
-        <p>date: <span>${value.time}</span></p>
-        <p>Done: <span>${value.checked}</span></p>
-    `
+const addToHistory = (value , time , done ) => {
+    const text = `
+        <p>activite: <span>${value}</span></p>
+        <p>date: <span>${time}</span></p>
+        <p>Done: <span>${(done) ? 'Yes' : 'No'}</span></p>
+    `;
     const item = document.createElement('div');
     const container = document.querySelector('.container-history');
     item.innerHTML = text;
     container.prepend(item);
-    });
+   
 };
 
 

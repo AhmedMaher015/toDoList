@@ -138,6 +138,10 @@ button:focus, input:focus {
   bottom: 5px;
 }
 
+/* .container-history{
+  display: none;
+} */
+
 @media (min-width: 526px) {
   main {
     width: 70%;
