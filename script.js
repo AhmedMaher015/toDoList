@@ -1,4 +1,17 @@
 'use strict'
+
+
+// store history of activites 
+const history = [];
+
+const addToHistory = (tex , tim , chec )=>{
+    const obj = {};
+    obj.text = tex;
+    obj.time = tim;
+    obj.checked = (chec) ? 'Yes':'No';
+    history.push(obj)
+};
+
 // define container of list
 const list = document.querySelector('.activites-list');
 
@@ -62,16 +75,29 @@ const changeText = () => {
      for (let i=0 ; i < activites.length ; i++ ){
          // check if checkbox is clicked then make text deleted
          if (activites[i].querySelector('input').checked){
-             console.log('cheched');
+             
              activites[i].querySelector('p').style.textDecoration = 'line-through';
-         }else {
-             // else make text not deleted
-             activites[i].querySelector('p').style.textDecoration = 'none';
-             console.log('unchecked');
+             addToHistory( activites[i].querySelector('p').textContent , activites[i].querySelector('.date').textContent , true )
+             setTimeout(()=>{
+                activites[i].remove();
+             },500);
          }
      }
 };
 
+const showHistory = () => {
+    history.forEach((value)=>{
+        const text = `
+        <p>activite: <span>${value.text}</span></p>
+        <p>date: <span>${value.time}</span></p>
+        <p>Done: <span>${value.checked}</span></p>
+    `
+    const item = document.createElement('div');
+    const container = document.querySelector('.container-history');
+    item.innerHTML = text;
+    container.prepend(item);
+    });
+};
 
 
 

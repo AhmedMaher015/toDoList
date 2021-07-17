@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+}
+
+html {
+  padding: 10px;
+}
+
+main {
+  background-color: #eee;
+  color: #333;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.user-input {
+  display: block;
+  width: 90%;
+  padding: 10px 10px;
+  margin: 13px auto;
+  text-align: left;
+  border-radius: 30px;
+  border: 1px solid #fff;
+}
+
+.btn-add {
+  background-color: #f78c27;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  font-size: 2em;
+  border: 1px solid #f78c27;
+  border-radius: 50%;
+}
+.btn-add:hover {
+  cursor: pointer;
+  background-color: #f78c27ea;
+}
+.btn-add:active {
+  background-color: #f78c27b0;
+}
+
+.btn-history {
+  background-color: #f78c27;
+  color: #fff;
+  width: 90%;
+  padding: 5px;
+  font-size: 1.05em;
+  border: 1px solid #f78c27;
+  border-radius: 30px;
+  margin: 10px auto;
+}
+.btn-history:hover {
+  cursor: pointer;
+  background-color: #f78c27ea;
+}
+.btn-history:active {
+  background-color: #f78c27b0;
+}
+
+.container-history {
+  padding: 10px;
+  margin: 10px auto;
+}
+.container-history div {
+  margin: 10px auto;
+  width: 85%;
+  padding: 10px;
+  background-color: #f78c27;
+  height: max-content;
+  color: #fff;
+  border-radius: 30px;
+}
+.container-history div p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activites-list, .container-history {
+  display: flex;
+  height: 420px;
+  flex-flow: column nowrap;
+  overflow: auto;
+}
+
+.activite {
+  background-color: #f78c27;
+  height: max-content;
+  color: #fff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  padding: 10px 10px;
+  margin: 13px auto;
+  text-align: left;
+  border-radius: 30px;
+  border: 1px solid #fff;
+}
+.activite p {
+  text-align: left;
+  letter-spacing: 1.5px;
+  margin-right: 8px;
+  display: inline-block;
+}
+.activite .date {
+  padding: 0px 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  background-color: #dd8533;
+  font-size: 0.75em;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.container-user-input {
+  position: relative;
+}
+
+.user-input-value {
+  background-color: #fff;
+  color: #dd8533;
+  width: max-content;
+  padding: 5px;
+  font-size: 0.85em;
+  position: absolute;
+  right: 25px;
+  bottom: 5px;
+}
+
+@media (min-width: 526px) {
+  main {
+    width: 70%;
+    margin: 5px auto;
+  }
+
+  .user-input-value {
+    right: 30px;
+  }
+}
+@media (min-width: 890px) {
+  main {
+    width: 50%;
+    margin: 5px auto;
+  }
+
+  .user-input-value {
+    right: 60px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

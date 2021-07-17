@@ -4,12 +4,37 @@ $container-color: #eee;
 $activite-color: #f78c27;
 $activite-color-light: #dd8533;
 
-@mixin activite-input{
-    & {
+@mixin activite-input(){
+
         width: 90%;
-        padding: 5px 10px;
+        padding: 10px 10px;
         margin: 13px auto;
-        text-align: left;   
+        text-align: left; 
+        border-radius: 30px;
+        border: 1px solid #fff;  
+    
+}
+
+@mixin btn {
+    & {
+        background-color: $activite-color;
+        color: #fff;
+        width: 90%;
+        padding: 5px;
+        font-size: 1.05em;
+        border: 1px solid $activite-color;
+        border-radius: 30px;
+        margin: 10px auto;
+    
+        &:hover {
+            cursor: pointer;
+            background-color: #f78c27ea;
+        }
+    
+        &:active {
+            background-color: #f78c27b0;
+        }   
+    
     }
 }
 
@@ -36,7 +61,7 @@ main {
 
 .user-input {
     display: block;
-    @include activite-input;
+    @include activite-input();
 }
 
 .btn-add {
@@ -59,8 +84,33 @@ main {
 
 }
 
+.btn-history {
+    @include btn();
+}
 
-.activites-list {
+
+
+.container-history {
+    // width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    div {
+        margin: 10px auto;
+        width: 85%;
+        padding: 10px;
+        background-color: $activite-color;
+        height: max-content;
+        color: #fff;
+        border-radius: 30px;
+        p {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+.activites-list , .container-history {
     display: flex;
     height: 420px;
     flex-flow: column nowrap;
@@ -95,7 +145,6 @@ main {
         color:#fff;
     }
 }
-
 
 
 
